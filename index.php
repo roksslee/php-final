@@ -5,13 +5,15 @@
 ?>
 <section class="prodlist">
     <article class="modal">
-        <span class="close">$times;</span>
-        <aside class="m-content"></aside>
+        <aside class="modal-content">
+            <span class="close">&times;</span>
+            <ul class="m-content"></ul>
+        </aside>
     </article>
     <ul>
         <?php
             foreach($products as $product){
-                echo "<li><p>".$product['pName']."</p><p>Brand: ".$product['brand']."</p><p>Size: ".$product['size']."</p></li>";
+                echo "<li><p>".$product['pName']."</p><p>Brand: ".$product['brand']."</p><p>Size: ".$product['size']."</p><button type='button' class='adding'>Add</button></li>";
             }
         ?>
     </ul>

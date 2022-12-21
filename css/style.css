@@ -7,16 +7,24 @@
     width: 70%;
 }
 
-.prodlist li {
+.prodlist li, .m-content li {
     padding: 2%;
     border-bottom: 1px solid gainsboro;
     display: flex;
     flex-direction: column;
+}
+
+.prodlist button {
+    padding: 1%;
+    background-color: dodgerblue;
+    border: 0;
+    border-radius: 5px;
+    color: whitesmoke;
     cursor: pointer;
 }
 
-.prodlist li:hover {
-    background-color: gainsboro;
+.prodlist button:hover {
+    background-color: cornflowerblue;
 }
 
 /* modal */
