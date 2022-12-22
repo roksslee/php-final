@@ -2,13 +2,13 @@
 include './app/init.php';
 
 //all articles
-$query= $dbcon->query("SELECT * FROM shoes");
+$query= $dbcon->query("SELECT * FROM shoes"); // 
 
 $articles =[];
-while($row= $query->fetch_object()){
-    $articles[]=$row;
+while($row= $query->fetch_object()){ //while loop because there is more than one article anf fetch the info of the row as object
+    $articles[]=$row; //creating the array with the info taken from the query 
 }
-print_r($articles)
+print_r($articles) //
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ print_r($articles)
 <body>
     <?php foreach($articles as $article): ?>
         <h3><a href="article.php?id=<?php echo $article->id; ?>"><?php echo $article->title;?></a></h3>
-        <h5>Rating: x/5</h5>
+        <h5>Rating: x/5</h5> <!-- here should be displayed the avg rating of the article 
     <?php endforeach ?>        
 
 
